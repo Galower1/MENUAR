@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { Home } from './components/Home';
 import { QR } from './components/QR';
+import { Viro } from './components/Viro';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +22,8 @@ export default function App() {
               iconName = 'home';
             } else if (route.name === 'QR') {
               iconName = 'camera';
+            } else if (route.name === 'Viro') {
+              iconName = 'apps-sharp';
             }
 
             return <Ionicons name={iconName} size={size} color={color} />;
@@ -31,6 +34,7 @@ export default function App() {
       >
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="QR" component={QR} />
+        <Tab.Screen name="Viro" component={Viro} />
       </Tab.Navigator>
     </NavigationContainer>
   );
